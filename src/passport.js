@@ -75,7 +75,7 @@ passport.use(
     async (accessToken, refreshToken, profile, done) => {
       try {
         const userDB = await uManager.findUserByEmail(profile.emails[0].value);
-        /* console.log(profile) */
+       
         // login
         if (userDB) {
           if (userDB.isGithub) {
@@ -86,7 +86,7 @@ passport.use(
         }
         // signup
         const infoUser = {
-          first_name: profile._json.name.split(" ")[0], // ['farid','sesin']
+          first_name: profile._json.name.split(" ")[0], 
           last_name: profile._json.name.split(" ")[1],
           email: profile.emails[0].value,
           password: " ",
