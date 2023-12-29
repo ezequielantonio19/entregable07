@@ -1,6 +1,6 @@
 import { cartsModel } from "../../db/models/carts.model.js";
 
-/* import { prodmanager } from "./productManagerMongo.js"; */
+
 
 class CartsManager {
     async createCart() {
@@ -28,7 +28,7 @@ class CartsManager {
                 quantity: 1 
             });
         }
-        /* await cartsModel.updateOne({ _id: cid }, {products: selectedCart.products}); */
+        
         await selectedCart.save()
         return selectedCart;
     }

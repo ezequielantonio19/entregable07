@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 const messagesSchema = new mongoose.Schema({  
   email: {
     type: String,
-    /* required: true,  */      
+    required: true,       
   },  
   message: {
     type: String,
-    /* required: true */
+    
   },
 });
 

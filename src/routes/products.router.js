@@ -8,11 +8,9 @@ const router = Router();
 router.get("/", async (req, res) => {
     try {
         const products = await manager.findAll(req.query);
-        //if (!products.length){
-        //    return res.status(404).json({message: 'Products not found'})    
-        //} 
+      
         res.status(200).json({ message: "Products found", products });
-        //res.render("catalogue", {products});
+     
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
